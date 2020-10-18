@@ -2,10 +2,10 @@ import React from "react";
 import "./homepage.css";
 
 class HomePage extends React.Component {
-	constructor() {
+	constructor(props) {
 		super();
 		this.state = {
-			login: false,
+			login: window.localStorage.getItem("registered") == true ? false : true,
 			email: "",
 			password: "",
 			message: "",
@@ -14,7 +14,20 @@ class HomePage extends React.Component {
 	}
 
 	componentDidMount() {
-		if (window.localStorage.getItem("token")) window.location.href = "/profile";
+		if (window.localStorage.getItem("token")) {
+			fetch("https://dsa-cracker-server.herokuapp.com/profile", {
+				method: "GET",
+				headers: {
+					"content-type": "application/json",
+					authorization: window.localStorage.getItem("token"),
+				},
+			})
+				.then((response) => response.json())
+				.then((data) => {
+					if (data.error) window.localStorage.removeItem("token");
+					else return (window.location.href = "/profile");
+				});
+		}
 	}
 
 	handleChange = (event) => {
@@ -37,7 +50,7 @@ class HomePage extends React.Component {
 			});
 		this.setState({ loading: true }, () => {
 			let link = this.state.login ? "login" : "register";
-			fetch(`https://flypocket-server.herokuapp.com/${link}`, {
+			fetch(`https://dsa-cracker-server.herokuapp.com/${link}`, {
 				method: "Post",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
@@ -49,6 +62,8 @@ class HomePage extends React.Component {
 				.then((data) => {
 					if (data.token) {
 						this.setState({ loading: false }, () => {
+							if ((link = "register"))
+								window.localStorage.setItem("registered", true);
 							window.localStorage.setItem("token", data.token);
 							window.location.href = "/profile";
 						});
@@ -69,29 +84,36 @@ class HomePage extends React.Component {
 			<div className="homepage__main">
 				<section className="homepage__info">
 					<h1 className="homepage__hero-title">
-						Save Passwords and Notes on the Fly!
+						Handpicked DSA questions for Interviews!
 					</h1>
 					<h3 className="homepage__hero-subtitle">
-						Join us today to avail these benefits!
+						Register and get 450+ Questions for Free!
 					</h3>
 					<ul className="homepage__benefits">
-						<li>Never use same password on every website, again!</li>
 						<li>
-							We use industry standard Hash Algorithms (
-							<span className="benefits--bold">AES256</span>) to keep your
-							information, <span className="benefits--bold">Secure!</span>
+							Handpicked, topic-wise questions by{" "}
+							<span className="benefits--bold">Amazon </span>Software Engineer{" "}
+							<a
+								href="https://www.linkedin.com/in/love-babbar-38ab2887/"
+								className="list__link"
+								target="_blank"
+							>
+								<span className="benefits--bold">Love Babbar</span>
+							</a>
 						</li>
 						<li>
-							Secure your accounts by using different passwords at every
-							website.
+							Get videos and more study material at his{" "}
+							<a
+								className="list__link"
+								href="https://www.youtube.com/channel/UCQHLxxBFrbfdrk1jF0moTpw"
+								target="_blank"
+							>
+								<span className="benefits--bold">Youtube</span>
+							</a>{" "}
+							Channel!
 						</li>
-						<li>
-							Use our{" "}
-							<span className="benefits--bold--underline">
-								chrome extension
-							</span>{" "}
-							to save passwords and information on the fly!
-						</li>
+						<li>Track your progress and compete with other programmers!</li>
+						<li>Get questions of every topic with varying difficulty level!</li>
 					</ul>
 				</section>
 				<section className="homepage__input">

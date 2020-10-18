@@ -50,6 +50,10 @@
   padding: 10px;
 }
 
+.homepage__main .homepage__info .homepage__benefits li .list__link {
+  color: #333;
+}
+
 .homepage__main .homepage__info .homepage__benefits li .benefits--bold {
   font-weight: 600;
 }

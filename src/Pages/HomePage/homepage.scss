@@ -31,7 +31,9 @@
 				letter-spacing: 1px;
 				color: #333;
 				padding: 10px;
-
+				& .list__link {
+					color: #333;
+				}
 				& .benefits--bold {
 					font-weight: 600;
 				}

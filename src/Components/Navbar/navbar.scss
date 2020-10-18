@@ -9,6 +9,12 @@
 	position: sticky;
 	top: 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+	& .nav__logo {
+		width: 100px;
+		margin-left: 100px;
+	}
+
 	& .nav__login {
 		padding: 15px 20px;
 		background-color: #49a1db;
@@ -24,5 +30,13 @@
 
 	& .nav__login:active {
 		background-color: #358bc4;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.navbar {
+		.nav__logo {
+			margin-left: 10px;
+		}
 	}
 }
