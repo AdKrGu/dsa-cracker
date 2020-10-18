@@ -1,0 +1,28 @@
+.navbar {
+	width: 100%;
+	height: 100px;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	& .nav__login {
+		padding: 15px 20px;
+		background-color: #49a1db;
+		color: white;
+		border: none;
+		margin: 30px;
+		font-size: 18px;
+		letter-spacing: 1px;
+		border-radius: 4px;
+		outline: none;
+		cursor: pointer;
+	}
+
+	& .nav__login:active {
+		background-color: #358bc4;
+	}
+}

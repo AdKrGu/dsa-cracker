@@ -1,0 +1,11 @@
+.main-container {
+	width: 100%;
+	background-color: #333;
+	min-height: calc(100vh - 101px);
+	.card-list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

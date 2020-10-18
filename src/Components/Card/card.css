@@ -1,0 +1,64 @@
+.profilepage__form-div {
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px -8px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px -8px;
+  background-color: white;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  margin: 20px;
+}
+
+.profilepage__form-div .card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 10px 20px 10px;
+}
+
+.profilepage__form-div .card__buttons span {
+  cursor: pointer;
+}
+
+.profilepage__form-div .profile-form__heading {
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.profilepage__form-div .profile-form__input {
+  padding: 15px;
+  margin: 10px;
+  outline: none;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 0.747);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.profilepage__form-div .profile-form__input:focus {
+  border: 1px solid #66afe9;
+}
+
+.profilepage__form-div .profile-form__change {
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .profilepage__form-div {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+/*# sourceMappingURL=card.css.map */

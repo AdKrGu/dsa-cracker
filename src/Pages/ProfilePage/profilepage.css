@@ -1,0 +1,18 @@
+.main-container {
+  width: 100%;
+  background-color: #333;
+  min-height: calc(100vh - 101px);
+}
+
+.main-container .card-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=profilepage.css.map */

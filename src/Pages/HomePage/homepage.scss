@@ -1,0 +1,118 @@
+.homepage__main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	& .benefits--bold--underline {
+		font-weight: 600;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	& .homepage__info {
+		margin-left: 7%;
+		width: 40%;
+		& .homepage__hero-title {
+			font-size: 2.6em;
+			margin-bottom: 0;
+		}
+		& .homepage__hero-subtitle {
+			font-size: 20px;
+			font-weight: 600;
+			color: #333;
+		}
+
+		& .homepage__benefits {
+			padding: 0;
+			& li {
+				font-size: 20px;
+				letter-spacing: 1px;
+				color: #333;
+				padding: 10px;
+
+				& .benefits--bold {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	& .homepage__input {
+		margin-right: 10%;
+		& .homepage__form-div {
+			border-radius: 5px;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px -8px;
+			background-color: white;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			& .form__heading {
+				font-size: 25px;
+				text-align: center;
+				letter-spacing: 1px;
+				margin: 0;
+			}
+
+			& .form__sub-heading {
+				font-size: 20px;
+				text-align: center;
+				color: #333;
+			}
+
+			& .form__input {
+				padding: 15px;
+				margin: 10px;
+				outline: none;
+				font-size: 16px;
+				color: rgba(51, 51, 51, 0.747);
+				border: 1px solid rgba(0, 0, 0, 0.1);
+			}
+
+			& .form__input:focus {
+				border: 1px solid #66afe9;
+			}
+
+			& .form__button {
+				padding: 15px 20px;
+				background-color: #49a1db;
+				color: white;
+				border: none;
+				margin: 10px;
+				font-size: 18px;
+				letter-spacing: 1px;
+				border-radius: 4px;
+				outline: none;
+				cursor: pointer;
+			}
+
+			& .form__button:active {
+				background-color: #358bc4;
+			}
+
+			& .form__change {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.homepage__main {
+		.homepage__info {
+			width: 95%;
+			margin: auto;
+
+			& .homepage__benefits {
+				padding: 20px;
+				padding-top: 0;
+			}
+		}
+
+		.homepage__input {
+			width: 95%;
+			margin: auto;
+		}
+	}
+}
