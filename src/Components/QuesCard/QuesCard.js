@@ -1,4 +1,5 @@
 import React from "react";
+import "./quescard.css";
 
 class QuesCard extends React.Component {
 	constructor() {
@@ -44,20 +45,32 @@ class QuesCard extends React.Component {
 
 	render() {
 		return (
-			<div>
-				{this.props.ques.uid}
-				<input
-					type="checkbox"
-					onChange={this.handleChange}
-					checked={this.state.checked}
-				/>
-				<a
-					href={this.props.ques.link}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<p>{this.props.ques.title}</p>
-				</a>
+			<div className="ques-card">
+				<div className="box">
+					<label htmlFor={this.props.ques.uid.toString()} className="noSelect">
+						{this.props.ques.link ? (
+							<a
+								className="ques-link"
+								href={this.props.ques.link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<p className="ques-title">{this.props.ques.title}</p>
+							</a>
+						) : (
+							<p className="ques-title" title="No Link">
+								{this.props.ques.title}
+							</p>
+						)}
+					</label>
+					<input
+						type="checkbox"
+						id={this.props.ques.uid.toString()}
+						onChange={this.handleChange}
+						checked={this.state.checked}
+					/>
+					<span className="check"></span>
+				</div>
 			</div>
 		);
 	}

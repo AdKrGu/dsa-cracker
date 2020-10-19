@@ -14,7 +14,7 @@ function Navbar() {
 					<button className="nav__login show-form__mobile">Enter</button>
 				</a>
 			) : (
-				<></>
+				<></>			
 			)}
 
 			{window.localStorage.getItem("token") ? (

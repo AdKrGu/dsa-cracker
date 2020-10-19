@@ -1,0 +1,109 @@
+.ques-card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+	height: auto;
+	pointer-events: auto;
+	border-radius: 4px;
+	font-weight: 600;
+	background-color: #fff;
+	padding: 0 0 0 15px;
+	margin: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+
+	& .ques-link {
+		text-decoration: none;
+	}
+
+	& .ques-title {
+		color: #333;
+		width: 300px;
+		text-transform: capitalize;
+	}
+
+	.box {
+		margin: 25px 0;
+		display: flex;
+		align-items: center;
+		user-select: none;
+
+		label {
+			font-size: 16px;
+			color: #4d4d4d;
+			position: absolute;
+			z-index: 10;
+			padding-left: 50px;
+			cursor: pointer;
+		}
+
+		input {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+
+			&:checked {
+				~ .check {
+					border-color: #00ea90;
+					box-shadow: 0px 0px 0px 15px #00ea90 inset;
+
+					&::after {
+						opacity: 1;
+						transform: scale(1);
+					}
+				}
+			}
+		}
+
+		.check {
+			width: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			border-radius: 100px;
+			background-color: #fff;
+			border: 2px solid #00ea90;
+			box-shadow: 0px 0px 0px 0px #00ea90 inset;
+			transition: all 0.3s cubic-bezier(0, 1.05, 0.72, 1.07);
+
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				position: absolute;
+				transform: scale(0);
+				background-size: 50%;
+				background-image: url("http://s6.picofile.com/d/8392306668/c38c12a0-6db3-47d4-a80c-7dad8fab5186/checkmark.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+				transition-delay: 0.2s !important;
+				transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+			}
+		}
+	}
+}
+
+.noSelect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+}
+
+@media only screen and (max-width: 500px) {
+	.ques-card {
+		& .ques-title {
+			width: 250px;
+			text-transform: capitalize;
+		}
+	}
+}

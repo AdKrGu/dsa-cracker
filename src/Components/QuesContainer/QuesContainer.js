@@ -31,23 +31,21 @@ class QuesContainer extends React.Component {
 	render() {
 		return (
 			<div className="ques-container">
-				<div>
-					<h1>
-						{this.props.type} Completed:{this.state.count}/
-						{this.end - this.start + 1}
-					</h1>
-					<div>
-						{this.props.questions.map((i, j) => {
-							return (
-								<QuesCard
-									ques={i}
-									key={j}
-									refreshCount={this.subsetQuestionChecked}
-									checked={this.props.checked}
-								/>
-							);
-						})}
-					</div>
+				<h2 className="ques-container__type-heading">
+					{this.props.type} ({this.state.count}/{this.end - this.start + 1})
+				</h2>
+				<div className="ques-container__ques-section">
+					{this.props.questions.map((i, j) => {
+						return (
+							<QuesCard
+								ques={i}
+								key={j}
+								id={j * 1000}
+								refreshCount={this.subsetQuestionChecked}
+								checked={this.props.checked}
+							/>
+						);
+					})}
 				</div>
 			</div>
 		);

@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=quescontainer.css.map */
+.ques-container {
+  width: 500px;
+  margin-top: 30px;
+}
+
+.ques-container .ques-container__type-heading {
+  margin-left: 20px;
+  padding: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 500px) {
+  .ques-container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=quescontainer.css.map */
