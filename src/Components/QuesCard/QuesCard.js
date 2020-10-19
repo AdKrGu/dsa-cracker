@@ -16,7 +16,7 @@ class QuesCard extends React.Component {
 			},
 			() => {
 				let link = this.state.checked ? "check" : "uncheck";
-				fetch(`http://localhost:8090/${link}`, {
+				fetch(`https://dsa-cracker-server.herokuapp.com/${link}`, {
 					method: "PATCH",
 					headers: {
 						"content-type": "application/json",
