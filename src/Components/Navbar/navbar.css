@@ -48,4 +48,10 @@
     margin-left: 10px;
   }
 }
+
+@media only screen and (min-width: 500px) {
+  .navbar .show-form__mobile {
+    display: none;
+  }
+}
 /*# sourceMappingURL=navbar.css.map */

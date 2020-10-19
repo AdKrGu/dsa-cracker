@@ -5,7 +5,7 @@ class HomePage extends React.Component {
 	constructor(props) {
 		super();
 		this.state = {
-			login: window.localStorage.getItem("registered") == true ? false : true,
+			login: false,
 			email: "",
 			password: "",
 			message: "",
@@ -62,8 +62,6 @@ class HomePage extends React.Component {
 				.then((data) => {
 					if (data.token) {
 						this.setState({ loading: false }, () => {
-							if ((link = "register"))
-								window.localStorage.setItem("registered", true);
 							window.localStorage.setItem("token", data.token);
 							window.location.href = "/profile";
 						});
@@ -97,6 +95,7 @@ class HomePage extends React.Component {
 								href="https://www.linkedin.com/in/love-babbar-38ab2887/"
 								className="list__link"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<span className="benefits--bold">Love Babbar</span>
 							</a>
@@ -107,6 +106,7 @@ class HomePage extends React.Component {
 								className="list__link"
 								href="https://www.youtube.com/channel/UCQHLxxBFrbfdrk1jF0moTpw"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<span className="benefits--bold">Youtube</span>
 							</a>{" "}
@@ -118,11 +118,11 @@ class HomePage extends React.Component {
 				</section>
 				<section className="homepage__input">
 					<div className="homepage__form-div">
-						<h1 className="form__heading">
+						<h1 className="form__heading" id="form">
 							{this.state.login ? "Login Here!" : "Register Now!"}
 						</h1>
 						<p className="form__sub-heading">
-							Save Passwords, notes and info on the fly!
+							Solve questions, Track progress & Compete
 						</p>
 						<input
 							className="form__input"
@@ -143,7 +143,12 @@ class HomePage extends React.Component {
 						{this.state.loading ? (
 							<button
 								className="form__button"
-								style={{ cursor: "notAllowed" }}
+								style={{
+									cursor: "not-allowed",
+									color: "black",
+									backgroundColor: "#fdfdfd",
+									border: "1px solid #333",
+								}}
 								disabled={true}
 							>
 								Loading!

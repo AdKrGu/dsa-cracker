@@ -7,14 +7,21 @@ function Navbar() {
 	return (
 		<nav className="navbar">
 			<Link to="/">
-				<img src={logo} className="nav__logo" />
-			</Link>	
+				<img src={logo} alt="logo" className="nav__logo" />
+			</Link>
+			{window.location.href === "/" ? (
+				<a href="#form">
+					<button className="nav__login show-form__mobile">Enter</button>
+				</a>
+			) : (
+				<></>
+			)}
 
 			{window.localStorage.getItem("token") ? (
 				<button
 					className="nav__login"
 					onClick={() => {
-						window.localStorage.removeItem("token");
+						window.localStorage.clear();
 						window.location.href = "/";
 					}}
 				>
