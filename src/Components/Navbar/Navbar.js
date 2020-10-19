@@ -9,7 +9,7 @@ function Navbar() {
 			<Link to="/">
 				<img src={logo} alt="logo" className="nav__logo" />
 			</Link>
-			{window.location.href === "/" ? (
+			{window.location.pathname === "/" ? (
 				<a href="#form">
 					<button className="nav__login show-form__mobile">Enter</button>
 				</a>
