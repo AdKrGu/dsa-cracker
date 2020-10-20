@@ -6,11 +6,9 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	position: sticky;
 	top: 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 	z-index: 200;
-	position: -webkit-sticky;
 
 	& .nav__logo {
 		width: 100px;

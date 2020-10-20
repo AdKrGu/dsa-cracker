@@ -1,5 +1,6 @@
 import React from "react";
 import QuesContainer from "../../Components/QuesContainer/QuesContainer";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 import { courses } from "../../courses";
 import "./profilepage.css";
 
@@ -88,7 +89,20 @@ class ProfilePage extends React.Component {
 			dp,
 			bm,
 		];
-
+		let ids = [
+			"array",
+			"string",
+			"ss",
+			"linkedlist",
+			"bt",
+			"greedy",
+			"backtracking",
+			"sq",
+			"heap",
+			"graphtrie",
+			"dp",
+			"bm",
+		];
 		let typeFullForms = [
 			"Arrays",
 			"Strings",
@@ -106,9 +120,11 @@ class ProfilePage extends React.Component {
 
 		return (
 			<div className="main-container">
+				<Sidebar ids={ids} headings={typeFullForms} />
 				{quesArr.map((i, j) => {
 					return (
 						<QuesContainer
+							id={ids[j]}
 							key={(j + 1) * 1000}
 							type={typeFullForms[j]}
 							questions={i}

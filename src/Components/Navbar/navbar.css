@@ -15,11 +15,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: sticky;
   top: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   z-index: 200;
-  position: -webkit-sticky;
 }
 
 .navbar .nav__logo {

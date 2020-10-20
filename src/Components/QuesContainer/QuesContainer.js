@@ -30,7 +30,7 @@ class QuesContainer extends React.Component {
 
 	render() {
 		return (
-			<div className="ques-container">
+			<div className="ques-container" id={this.props.id}>
 				<h2 className="ques-container__type-heading">
 					{this.props.type} ({this.state.count}/{this.end - this.start + 1})
 				</h2>
