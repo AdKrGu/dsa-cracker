@@ -13,8 +13,19 @@ function App() {
 			link = link.replace("http", "https");
 			window.location.href = link;
 		}
-	});
 
+		console.log(
+			"@@@@@@@@@@@\t\t@     @\n@         @\t\t@    @\n@         @\t\t@   @\n@         @\t\t@  @\n@         @\t\t@ @\n@@@@@@@@@@@\t\t@ @\n@         @\t\t@  @\n@         @\t\t@   @\n@         @\t\t@    @\n@         @\t\t@     @\n@         @\t\t@      @"
+		);
+		console.log(
+			"%cWebsite by Aditya Krishna Gupta",
+			"color:cyan;font-size: medium"
+		);
+		console.log(
+			"%cFind Me Here\n\n\nLinkedin: https://linkedin.com/in/adityakrishnagupta\n\n\nGithub: https://github.com/AdityaKG-169",
+			"color:orange;font-size: x-large"
+		);
+	});
 	return (
 		<div className="app">
 			<Navbar />
