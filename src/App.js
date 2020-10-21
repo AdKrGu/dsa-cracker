@@ -8,11 +8,13 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 
 function App() {
 	useEffect(() => {
-		// if (window.location.protocol === "http:") {
-		// 	let link = window.location.href;
-		// 	link = link.replace("http", "https");
-		// 	window.location.href = link;
-		// }
+		if (process.env.NODE_ENV !== "development") {
+			if (window.location.protocol === "http:") {
+				let link = window.location.href;
+				link = link.replace("http", "https");
+				window.location.href = link;
+			}
+		}
 
 		console.log(
 			"@@@@@@@@@@@\t\t@     @\n@         @\t\t@    @\n@         @\t\t@   @\n@         @\t\t@  @\n@         @\t\t@ @\n@@@@@@@@@@@\t\t@ @\n@         @\t\t@  @\n@         @\t\t@   @\n@         @\t\t@    @\n@         @\t\t@     @\n@         @\t\t@      @"

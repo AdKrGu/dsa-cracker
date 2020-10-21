@@ -8,7 +8,7 @@
 	align-items: center;
 	top: 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-	z-index: 200;
+	z-index: 199;
 
 	& .nav__logo {
 		width: 100px;
@@ -35,8 +35,19 @@
 
 @media only screen and (max-width: 500px) {
 	.navbar {
+		position: sticky;
+		position: -webkit-sticky;
 		& .nav__logo {
-			margin-left: 10px;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 47%;
+			transform: translate(-50%);
+		}
+
+		& .nav__login {
+			padding: 10px 15px;
+			margin-right: 10px;
 		}
 	}
 }

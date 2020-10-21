@@ -22,11 +22,7 @@ const Sidebar = (props) => {
 					);
 				})}
 			</div>
-
-			<span
-				style={{ fontSize: "30px", cursor: "pointer" }}
-				onClick={() => setWidth(250)}
-			>
+			<span className="openbtn" onClick={() => setWidth(250)}>
 				&#9776;
 			</span>
 		</div>
