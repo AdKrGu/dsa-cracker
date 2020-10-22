@@ -3,6 +3,7 @@ import QuesContainer from "../../Components/QuesContainer/QuesContainer";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { courses } from "../../courses";
 import "./profilepage.css";
+import { Link } from "react-router-dom";
 
 class ProfilePage extends React.Component {
 	constructor() {
@@ -119,19 +120,24 @@ class ProfilePage extends React.Component {
 		];
 
 		return (
-			<div className="main-container">
-				<Sidebar ids={ids} headings={typeFullForms} />
-				{quesArr.map((i, j) => {
-					return (
-						<QuesContainer
-							id={ids[j]}
-							key={(j + 1) * 1000}
-							type={typeFullForms[j]}
-							questions={i}
-							checked={this.state.checked}
-						/>
-					);
-				})}
+			<div>
+				<p>
+					Upload Videos for premium <Link to="/upload">here</Link>
+				</p>
+				<div className="main-container">
+					<Sidebar ids={ids} headings={typeFullForms} />
+					{quesArr.map((i, j) => {
+						return (
+							<QuesContainer
+								id={ids[j]}
+								key={(j + 1) * 1000}
+								type={typeFullForms[j]}
+								questions={i}
+								checked={this.state.checked}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	}

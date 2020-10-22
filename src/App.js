@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import HomePage from "./Pages/HomePage/HomePage";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
+import UploadSolutionPage from "./Pages/UploadSolutionsPage/UploadSolutionsPage";
 
 function App() {
 	useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
 			<Switch>
 				<Route component={HomePage} exact path="/" />
 				<Route component={ProfilePage} path="/profile" />
+				<Route component={UploadSolutionPage} path="/upload" />
 				<Route component={PageNotFound} path="*" />
 			</Switch>
 		</div>
