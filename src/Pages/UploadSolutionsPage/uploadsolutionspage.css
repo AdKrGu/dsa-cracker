@@ -1,1 +1,21 @@
-/* No CSS *//*# sourceMappingURL=uploadsolutionspage.css.map */
+.upload-page__main-container {
+  width: 100%;
+  height: calc(100vh - 101px);
+  overflow: hidden;
+}
+
+.upload-page__main-container .upload__card {
+  background-color: #fff;
+  width: 60%;
+  margin: 40vh auto 0 auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=uploadsolutionspage.css.map */

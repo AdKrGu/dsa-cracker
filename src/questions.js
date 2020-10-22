@@ -253,7 +253,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/minimum-swaps-required-to-bring-all-elements-less-than-or-equal-to-k-together/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 34,
 		type: "array",
 		title: "Minimum no. of operations required to make an array palindrome",
@@ -267,7 +267,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/find-the-median0527/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 36,
 		type: "array",
 		title: "Median of 2 sorted arrays of different size",
@@ -275,7 +275,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 37,
 		type: "matrix",
 		title: "Spiral traversal on a Matrix",
@@ -305,7 +305,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 41,
 		type: "matrix",
 		title: "Print elements in sorted order using row-column wise sorted matrix",
@@ -326,7 +326,7 @@ export const questions = [
 		link: "https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 44,
 		type: "matrix",
 		title: "Rotate matrix by 90 degrees",
@@ -334,14 +334,14 @@ export const questions = [
 			"https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 45,
 		type: "matrix",
-		title: "Kth smallest element in a row-cpumn wise sorted matrix",
+		title: "Kth smallest element in a row-column wise sorted matrix",
 		link: "https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 46,
 		type: "matrix",
 		title: "Common elements in all rows of a given matrix",
@@ -670,14 +670,14 @@ export const questions = [
 			"https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 88,
 		type: "string",
 		title: "Check if two given strings are isomorphic to each other",
 		link: "https://practice.geeksforgeeks.org/problems/isomorphic-strings/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 89,
 		type: "string",
 		title:
@@ -905,7 +905,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/smallest-factorial-number5929/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 119,
 		type: "searching & sorting",
 		title: "Painters Partition Problem:",
@@ -913,42 +913,42 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 120,
 		type: "searching & sorting",
 		title: "ROTI-Prata SPOJ",
 		link: "https://www.spoj.com/problems/PRATA/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 121,
 		type: "searching & sorting",
 		title: "DoubleHelix SPOJ",
 		link: "https://www.spoj.com/problems/ANARC05B/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 122,
 		type: "searching & sorting",
 		title: "Subset Sums",
 		link: "https://www.spoj.com/problems/SUBSUMS/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 123,
 		type: "searching & sorting",
 		title: "Findthe inversion count",
 		link: "https://practice.geeksforgeeks.org/problems/inversion-of-array/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 124,
 		type: "searching & sorting",
 		title: "Implement Merge-sort in-place",
 		link: "https://www.geeksforgeeks.org/in-place-merge-sort/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 125,
 		type: "searching & sorting",
 		title: "Partitioning and Sorting Arrays with Many Repeated Entries",
@@ -1231,7 +1231,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 161,
 		type: "linkedlist",
 		title: "Find the first non-repeating character from a stream of characters",
@@ -1469,7 +1469,7 @@ export const questions = [
 		link: "https://www.geeksforgeeks.org/print-k-sum-paths-binary-tree/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 192,
 		type: "binary trees",
 		title: "Find LCA in a Binary tree",
@@ -1477,7 +1477,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 193,
 		type: "binary trees",
 		title: "Find distance between 2 nodes in a Binary tree",
@@ -1485,7 +1485,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/min-distance-between-two-given-nodes-of-a-binary-tree/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 194,
 		type: "binary trees",
 		title: "Kth Ancestor of node in a Binary tree",
@@ -1499,7 +1499,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/duplicate-subtrees/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 196,
 		type: "binary trees",
 		title: "Tree Isomorphism Problem",
@@ -1630,7 +1630,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/count-bst-nodes-that-lie-in-a-given-range/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 213,
 		type: "binary search trees",
 		title: "Replace every element with the least greater element on its right",
@@ -1638,7 +1638,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/replace-every-element-with-the-least-greater-element-on-its-right/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 214,
 		type: "binary search trees",
 		title: 'Given "n" appointments, find the conflicting appointments',
@@ -1646,14 +1646,14 @@ export const questions = [
 			"https://www.geeksforgeeks.org/given-n-appointments-find-conflicting-appointments/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 215,
 		type: "binary search trees",
 		title: "Check preorder is valid or not",
 		link: "https://practice.geeksforgeeks.org/problems/preorder-to-postorder/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 216,
 		type: "binary search trees",
 		title: "Check whether BST contains Dead end",
@@ -1668,7 +1668,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/largest-bst/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 218,
 		type: "binary search trees",
 		title: "Flatten BST to sorted list",
@@ -1884,21 +1884,21 @@ export const questions = [
 		link: "https://www.spoj.com/problems/GCJ101BB/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 247,
 		type: "greedy",
 		title: "CHOCOLA –Chocolate",
 		link: "https://www.spoj.com/problems/CHOCOLA/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 248,
 		type: "greedy",
 		title: "ARRANGE -Arranging Amplifiers",
 		link: "https://www.spoj.com/problems/ARRANGE/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 249,
 		type: "greedy",
 		title: "K Centers Problem",
@@ -1906,21 +1906,21 @@ export const questions = [
 			"https://www.geeksforgeeks.org/k-centers-problem-set-1-greedy-approximate-algorithm/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 250,
 		type: "greedy",
 		title: "Minimum Cost of ropes",
 		link: "https://practice.geeksforgeeks.org/problems/minimum-cost-of-ropes/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 251,
 		type: "greedy",
 		title: "Find smallest number with given number of digits and sum of digits",
 		link: "https://practice.geeksforgeeks.org/problems/smallest-number5829/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 252,
 		type: "greedy",
 		title:
@@ -1928,7 +1928,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/rearrange-characters/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 253,
 		type: "greedy",
 		title: "Find maximum sum possible equal sum of three stacks",
@@ -2024,7 +2024,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/combination-sum/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 266,
 		type: "backtracking",
 		title: "Find Maximum number possible by doing at-most K swaps",
@@ -2032,7 +2032,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/largest-number-in-k-swaps/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 267,
 		type: "backtracking",
 		title: "Print all permutations of a string",
@@ -2040,7 +2040,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 268,
 		type: "backtracking",
 		title: "Find if there is a path of more than k length from a source",
@@ -2048,7 +2048,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/find-if-there-is-a-path-of-more-than-k-length-from-a-source/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 269,
 		type: "backtracking",
 		title: "Longest Possible Route in a Matrix with Hurdles",
@@ -2056,7 +2056,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/longest-possible-route-in-a-matrix-with-hurdles/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 270,
 		type: "backtracking",
 		title:
@@ -2065,7 +2065,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 271,
 		type: "backtracking",
 		title: "Partition of a set intoK subsets with equal sum",
@@ -2073,7 +2073,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/partition-array-to-k-subsets/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 272,
 		type: "backtracking",
 		title: "Find the K-th Permutation Sequence of first N natural numbers",
@@ -2318,7 +2318,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/rotten-oranges/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 304,
 		type: "stacks & queues",
 		title: "Distance of nearest cell having 1 in a binary matrix",
@@ -2326,7 +2326,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 305,
 		type: "stacks & queues",
 		title: "First negative integer in every window of size “k”",
@@ -2334,7 +2334,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 306,
 		type: "stacks & queues",
 		title: "Check if all levels of two trees are anagrams or not.",
@@ -2342,7 +2342,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/check-if-all-levels-of-two-trees-are-anagrams-or-not/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 307,
 		type: "stacks & queues",
 		title: "Sum of minimum and maximum elements of all subarrays of size “k”.",
@@ -2350,7 +2350,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/sum-minimum-maximum-elements-subarrays-size-k/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 308,
 		type: "stacks & queues",
 		title:
@@ -2358,7 +2358,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/game-with-string/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 309,
 		type: "stacks & queues",
 		title: "Queue based approach or first non-repeating character in a stream.",
@@ -2366,7 +2366,7 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 310,
 		type: "stacks & queues",
 		title: "Next Smaller Element",
@@ -2464,35 +2464,35 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/find-median-in-a-stream/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 323,
 		type: "heap",
 		title: "Check if a Binary Tree is Heap",
 		link: "https://practice.geeksforgeeks.org/problems/is-binary-tree-heap/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 324,
 		type: "heap",
 		title: "Connect “n” ropes with minimum cost",
 		link: "https://practice.geeksforgeeks.org/problems/minimum-cost-of-ropes/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 325,
 		type: "heap",
 		title: "Convert BST to Min Heap",
 		link: "https://www.geeksforgeeks.org/convert-bst-min-heap/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 326,
 		type: "heap",
 		title: "Convert min heap to max heap",
 		link: "https://www.geeksforgeeks.org/convert-min-heap-to-max-heap/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 327,
 		type: "heap",
 		title:
@@ -2500,7 +2500,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/rearrange-characters/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 328,
 		type: "heap",
 		title: "Minimum sum of two numbers formed from digits of an array",
@@ -2787,7 +2787,7 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/m-coloring-problem/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 366,
 		type: "graph",
 		title: "Minimum edges to reverse o make path from source to destination",
@@ -2795,7 +2795,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 367,
 		type: "graph",
 		title: "Paths to travel each nodes using each edge(Seven Bridges)",
@@ -2803,7 +2803,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/paths-travel-nodes-using-edgeseven-bridges-konigsberg/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 368,
 		type: "graph",
 		title: "Vertex Cover Problem",
@@ -2811,7 +2811,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 369,
 		type: "graph",
 		title: "Chinese Postman or Route Inspection",
@@ -2819,7 +2819,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/chinese-postman-route-inspection-set-1-introduction/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 370,
 		type: "graph",
 		title: "Number of Triangles in a Directed and Undirected Graph",
@@ -2827,7 +2827,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/number-of-triangles-in-directed-and-undirected-graphs/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 371,
 		type: "graph",
 		title:
@@ -2836,7 +2836,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/minimize-cash-flow-among-given-set-friends-borrowed-money/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 372,
 		type: "graph",
 		title: "Two Clique Problem",
@@ -2844,14 +2844,14 @@ export const questions = [
 			"https://www.geeksforgeeks.org/two-clique-problem-check-graph-can-divided-two-cliques/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 373,
 		type: "trie",
 		title: "Construct a trie from scratch",
 		link: "https://www.geeksforgeeks.org/trie-insert-and-search/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 374,
 		type: "trie",
 		title: "Find shortest unique prefix for every word in a given list",
@@ -2859,28 +2859,28 @@ export const questions = [
 			"https://www.geeksforgeeks.org/find-all-shortest-unique-prefixes-to-represent-each-word-in-a-given-list/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 375,
 		type: "trie",
 		title: "Word Break Problem | (Trie solution)",
 		link: "https://www.geeksforgeeks.org/word-break-problem-trie-solution/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 376,
 		type: "trie",
 		title: "Given a sequence of words, print all anagrams together",
 		link: "https://practice.geeksforgeeks.org/problems/k-anagrams-1/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 377,
 		type: "trie",
 		title: "Implement a Phone Directory",
 		link: "https://practice.geeksforgeeks.org/problems/phone-directory/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 378,
 		type: "trie",
 		title: "Print unique rows in a given boolean matrix",
@@ -3327,14 +3327,14 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/maximum-profit4657/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 437,
 		type: "dynamic programming",
 		title: "Find if a string is interleaved of two other strings",
 		link: "https://practice.geeksforgeeks.org/problems/interleaved-strings/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 438,
 		type: "dynamic programming",
 		title: "Maximum Length of Pair Chain",
@@ -3364,21 +3364,21 @@ export const questions = [
 		link: "https://practice.geeksforgeeks.org/problems/bit-difference/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 442,
 		type: "bit manipulation",
 		title: "Count total set bits in all numbers from 1 to n",
 		link: "https://practice.geeksforgeeks.org/problems/count-total-set-bits/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 443,
 		type: "bit manipulation",
 		title: "Program to find whether a no is power of two",
 		link: "https://practice.geeksforgeeks.org/problems/power-of-2/0",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 444,
 		type: "bit manipulation",
 		title: "Find position of the only set bit",
@@ -3386,14 +3386,14 @@ export const questions = [
 			"https://practice.geeksforgeeks.org/problems/find-position-of-set-bit3706/1",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 445,
 		type: "bit manipulation",
 		title: "Copy set bits in a range",
 		link: "https://www.geeksforgeeks.org/copy-set-bits-in-a-range/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 446,
 		type: "bit manipulation",
 		title:
@@ -3402,7 +3402,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/divide-two-integers-without-using-multiplication-division-mod-operator/",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 447,
 		type: "bit manipulation",
 		title: "Calculate square of a number without using *, / and pow()",
@@ -3410,7 +3410,7 @@ export const questions = [
 			"https://www.geeksforgeeks.org/calculate-square-of-a-number-without-using-and-pow/#:~:text=Given%20an%20integer%20n%2C%20calculate,*%2C%20%2F%20and%20pow().&text=A%20Simple%20Solution%20is%20to%20repeatedly%20add%20n%20to%20result.",
 	},
 	{
-		golden: false,
+		golden: true,
 		uid: 448,
 		type: "bit manipulation",
 		title: "Power Set",

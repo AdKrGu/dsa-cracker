@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,4BAA4B,CAAC;EAC5B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,mBAAmB;EAC3B,QAAQ,EAAE,MAAM;CAShB;;AAZD,AAIC,4BAJ2B,CAIzB,aAAa,CAAC;EACf,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,gBAAgB;EACxB,SAAS,EAAE,gBAAgB;EAC3B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACtB",
     "sources": [
         "uploadsolutionspage.scss"
     ],

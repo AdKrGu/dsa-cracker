@@ -4,6 +4,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import { questions } from "../../questions";
 import "./profilepage.css";
 import { Link } from "react-router-dom";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 class ProfilePage extends React.Component {
 	constructor() {
@@ -39,6 +40,8 @@ class ProfilePage extends React.Component {
 	}
 
 	render() {
+		if (!window.localStorage.getItem("token")) return <PageNotFound />;
+
 		let array = this.state.questions.filter((i, j) => {
 			return i.type === "array" || i.type === "matrix";
 		});

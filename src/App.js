@@ -25,8 +25,8 @@ function App() {
 			"color:cyan;font-size: medium"
 		);
 		console.log(
-			"%cFind Me Here\n\n\nLinkedin: https://linkedin.com/in/adityakrishnagupta\n\n\nGithub: https://github.com/AdityaKG-169",
-			"color:orange;font-size: x-large"
+			"%cFind Me At\n\n\nLinkedin: https://linkedin.com/in/adityakrishnagupta\n\n\nGithub: https://github.com/AdityaKG-169",
+			"color:orange;font-size: large"
 		);
 	});
 	return (

@@ -1,6 +1,8 @@
 import React from "react";
 import "./uploadsolutionspage.css";
 import { storage } from "../../Firebase/config";
+import PageNotFound from "../PageNotFound/PageNotFound";
+import { Link } from "react-router-dom";
 
 class UploadSolutionsPage extends React.Component {
 	constructor() {
@@ -8,6 +10,10 @@ class UploadSolutionsPage extends React.Component {
 		this.state = {
 			url: "",
 			loading: false,
+			confirmEmail: "",
+			quesId: "",
+			loadingProgress: 0,
+			message: "",
 		};
 	}
 
@@ -17,17 +23,17 @@ class UploadSolutionsPage extends React.Component {
 		uplaodTask.on(
 			"state_changed",
 			(snapshot) => {
-				this.setState({ loading: true }, () =>
-					console.log(
-						"Loading: " +
-							Math.round(
-								(snapshot.bytesTransferred / snapshot.totalBytes) * 100
-							)
-					)
-				);
+				this.setState({
+					loading: true,
+					loadingProgress: Math.round(
+						(snapshot.bytesTransferred / snapshot.totalBytes) * 100
+					),
+				});
 			},
 			(error) => {
-				console.log(error);
+				this.setState({
+					message: "Error Uploading the Video!",
+				});
 			},
 			() => {
 				storage()
@@ -35,16 +41,88 @@ class UploadSolutionsPage extends React.Component {
 					.child(file.name)
 					.getDownloadURL()
 					.then((url) => {
-						this.setState({ url }, () => console.log(url));
+						this.setState({ loading: false, url });
 					});
 			}
 		);
 	};
 
+	handleChange = (event) => {
+		let { name, value } = event.target;
+		this.setState({
+			[name]: value,
+		});
+	};
+
+	handleSubmit = () => {
+		if (!this.state.quesId || !this.state.confirmEmail)
+			return this.setState({ message: "Please Fill All the details!" });
+
+		fetch("http://localhost:8090/upload", {
+			method: "post",
+			headers: {
+				"content-type": "application/json",
+				Authorization: window.localStorage.getItem("token"),
+			},
+			body: JSON.stringify({
+				solution: this.state.url,
+				confirmEmail: this.state.confirmEmail,
+				quesId: this.state.quesId,
+			}),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				return this.setState({
+					message: data.message,
+					url: "",
+					confirmEmail: "",
+					quesId: "",
+				});
+			});
+	};
+
 	render() {
+		if (!window.localStorage.getItem("token")) return <PageNotFound />;
 		return (
-			<div>
-				<input type="file" onChange={this.upload} />
+			<div className="upload-page__main-container">
+				<div className="upload__card">
+					<input
+						type="email"
+						placeholder="Confirm Email"
+						onChange={this.handleChange}
+						className="upload__input"
+						name="confirmEmail"
+						value={this.state.confirmEmail}
+					/>
+					<input
+						type="text"
+						className="upload__input"
+						placeholder="Ques ID"
+						onChange={this.handleChange}
+						name="quesId"
+						value={this.state.quesId}
+					/>
+					<input type="file" onChange={this.upload} />
+					{this.state.loading ? (
+						<div className="w3-light-grey w3-round-xlarge">
+							<div
+								className="w3-container w3-blue w3-round-xlarge"
+								style={{ width: this.state.loadingProgress }}
+							>
+								{this.state.loadingProgress}%
+							</div>
+						</div>
+					) : null}
+					{this.state.loadingProgress === 100 ? (
+						<button onClick={this.handleSubmit}>Submit</button>
+					) : (
+						<button disabled={true}>Submit</button>
+					)}
+					<p>{this.state.message}</p>
+				</div>
+				<p>
+					Click <Link to="/profile">here</Link> to go to profile page!
+				</p>
 			</div>
 		);
 	}

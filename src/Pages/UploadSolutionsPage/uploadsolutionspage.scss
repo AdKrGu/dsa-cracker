@@ -1,0 +1,13 @@
+.upload-page__main-container {
+	width: 100%;
+	height: calc(100vh - 101px);
+	overflow: hidden;
+	& .upload__card {
+		background-color: #fff;
+		width: 60%;
+		margin: 40vh auto 0 auto;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+	}
+}
