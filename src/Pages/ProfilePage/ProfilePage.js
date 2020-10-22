@@ -1,7 +1,7 @@
 import React from "react";
 import QuesContainer from "../../Components/QuesContainer/QuesContainer";
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import { courses } from "../../courses";
+import { questions } from "../../questions";
 import "./profilepage.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ class ProfilePage extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			courses: courses,
+			questions: questions,
 			checked: [],
 		};
 	}
@@ -39,40 +39,40 @@ class ProfilePage extends React.Component {
 	}
 
 	render() {
-		let array = this.state.courses.filter((i, j) => {
+		let array = this.state.questions.filter((i, j) => {
 			return i.type === "array" || i.type === "matrix";
 		});
-		let string = this.state.courses.filter((i, j) => {
+		let string = this.state.questions.filter((i, j) => {
 			return i.type === "string";
 		});
-		let ss = this.state.courses.filter((i, j) => {
+		let ss = this.state.questions.filter((i, j) => {
 			return i.type === "searching & sorting";
 		});
-		let linkedlist = this.state.courses.filter((i, j) => {
+		let linkedlist = this.state.questions.filter((i, j) => {
 			return i.type === "linkedlist";
 		});
-		let bt = this.state.courses.filter((i, j) => {
+		let bt = this.state.questions.filter((i, j) => {
 			return i.type === "binary trees" || i.type === "binary search trees";
 		});
-		let greedy = this.state.courses.filter((i, j) => {
+		let greedy = this.state.questions.filter((i, j) => {
 			return i.type === "greedy";
 		});
-		let backtracking = this.state.courses.filter((i, j) => {
+		let backtracking = this.state.questions.filter((i, j) => {
 			return i.type === "backtracking";
 		});
-		let sq = this.state.courses.filter((i, j) => {
+		let sq = this.state.questions.filter((i, j) => {
 			return i.type === "stacks & queues";
 		});
-		let heap = this.state.courses.filter((i, j) => {
+		let heap = this.state.questions.filter((i, j) => {
 			return i.type === "heap";
 		});
-		let graphtrie = this.state.courses.filter((i, j) => {
+		let graphtrie = this.state.questions.filter((i, j) => {
 			return i.type === "graph" || i.type === "trie";
 		});
-		let dp = this.state.courses.filter((i, j) => {
+		let dp = this.state.questions.filter((i, j) => {
 			return i.type === "dynamic programming";
 		});
-		let bm = this.state.courses.filter((i, j) => {
+		let bm = this.state.questions.filter((i, j) => {
 			return i.type === "bit manipulation";
 		});
 

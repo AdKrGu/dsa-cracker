@@ -45,7 +45,12 @@ class QuesCard extends React.Component {
 
 	render() {
 		return (
-			<div className="ques-card">
+			<div
+				className="ques-card"
+				title={`ID: ${this.props.ques.type.toUpperCase().replaceAll(" ", "")}_${
+					this.props.ques.uid
+				}`}
+			>
 				<div className="box">
 					<label htmlFor={this.props.ques.uid.toString()} className="noSelect">
 						{this.props.ques.link ? (
@@ -55,12 +60,20 @@ class QuesCard extends React.Component {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<p className="ques-title">{this.props.ques.title}</p>
+								{this.props.ques.golden ? (
+									<p className="ques-title" style={{ color: "#F9D733" }}>
+										{this.props.ques.title}
+									</p>
+								) : (
+									<p className="ques-title">{this.props.ques.title}</p>
+								)}
 							</a>
-						) : (
-							<p className="ques-title" title="No Link">
+						) : this.props.ques.golden ? (
+							<p className="ques-title" style={{ color: "#F9D733" }}>
 								{this.props.ques.title}
 							</p>
+						) : (
+							<p className="ques-title">{this.props.ques.title}</p>
 						)}
 					</label>
 					<input

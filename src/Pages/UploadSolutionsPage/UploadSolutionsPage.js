@@ -5,7 +5,10 @@ import { storage } from "../../Firebase/config";
 class UploadSolutionsPage extends React.Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			url: "",
+			loading: false,
+		};
 	}
 
 	upload = (event) => {
@@ -13,7 +16,16 @@ class UploadSolutionsPage extends React.Component {
 		const uplaodTask = storage().ref(`solutions/${file.name}`).put(file);
 		uplaodTask.on(
 			"state_changed",
-			(snapshot) => {},
+			(snapshot) => {
+				this.setState({ loading: true }, () =>
+					console.log(
+						"Loading: " +
+							Math.round(
+								(snapshot.bytesTransferred / snapshot.totalBytes) * 100
+							)
+					)
+				);
+			},
 			(error) => {
 				console.log(error);
 			},
@@ -23,7 +35,7 @@ class UploadSolutionsPage extends React.Component {
 					.child(file.name)
 					.getDownloadURL()
 					.then((url) => {
-						console.log(url);
+						this.setState({ url }, () => console.log(url));
 					});
 			}
 		);
