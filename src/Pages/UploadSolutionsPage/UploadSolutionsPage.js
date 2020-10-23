@@ -58,7 +58,7 @@ class UploadSolutionsPage extends React.Component {
 		if (!this.state.quesId || !this.state.confirmEmail)
 			return this.setState({ message: "Please Fill All the details!" });
 
-		fetch("https://dsa-cracker.herokuapp.com/upload", {
+		fetch("https://dsa-cracker-server.herokuapp.com/upload", {
 			method: "post",
 			headers: {
 				"content-type": "application/json",

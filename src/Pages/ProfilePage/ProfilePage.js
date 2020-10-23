@@ -128,7 +128,7 @@ class ProfilePage extends React.Component {
 					Upload Videos for premium <Link to="/upload">here</Link>
 				</p>
 				<div className="main-container">
-					<Sidebar ids={ids} headings={typeFullForms} />
+					{/* <Sidebar ids={ids} headings={typeFullForms} /> */}
 					{quesArr.map((i, j) => {
 						return (
 							<QuesContainer
