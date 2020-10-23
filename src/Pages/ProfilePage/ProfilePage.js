@@ -124,11 +124,11 @@ class ProfilePage extends React.Component {
 
 		return (
 			<div>
-				<p>
+				{/* <p>
 					Upload Videos for premium <Link to="/upload">here</Link>
-				</p>
+				</p> */}
 				<div className="main-container">
-					{/* <Sidebar ids={ids} headings={typeFullForms} /> */}
+					<Sidebar ids={ids} headings={typeFullForms} />
 					{quesArr.map((i, j) => {
 						return (
 							<QuesContainer
