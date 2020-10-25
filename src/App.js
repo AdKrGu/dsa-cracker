@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./app.css";
+import Announcement from "./Components/Announcement/Announcement";
 import Navbar from "./Components/Navbar/Navbar";
 import HomePage from "./Pages/HomePage/HomePage";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
@@ -39,6 +40,7 @@ function App() {
 
 	return (
 		<div className="app">
+			<Announcement />
 			<Navbar openSidebar={() => openSidebar()} />
 			<Switch>
 				<Route component={HomePage} exact path="/" />
