@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./app.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -29,12 +29,23 @@ function App() {
 			"color:orange;font-size: large"
 		);
 	});
+
+	const [width, setWidth] = useState(0);
+
+	const openSidebar = () => {
+		if (width === 0) setWidth(250);
+		else setWidth(0);
+	};
+
 	return (
 		<div className="app">
-			<Navbar />
+			<Navbar openSidebar={() => openSidebar()} />
 			<Switch>
 				<Route component={HomePage} exact path="/" />
-				<Route component={ProfilePage} path="/profile" />
+				<Route
+					path="/profile"
+					render={(props) => <ProfilePage {...props} width={width} />}
+				/>
 				<Route component={UploadSolutionPage} path="/upload" />
 				<Route component={PageNotFound} path="*" />
 			</Switch>

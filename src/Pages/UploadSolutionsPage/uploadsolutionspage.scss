@@ -4,10 +4,22 @@
 	overflow: hidden;
 	& .upload__card {
 		background-color: #fff;
-		width: 60%;
+		width: 50%;
 		margin: 40vh auto 0 auto;
 		transform: translateY(-50%);
 		display: flex;
 		flex-direction: column;
+		padding: 20px;
+
+		& input {
+			padding: 10px;
+			margin: 10px;
+		}
+
+		& button {
+			padding: 10px 30px;
+			width: 30%;
+			margin: 10px;
+		}
 	}
 }

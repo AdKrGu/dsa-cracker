@@ -14,6 +14,7 @@ class UploadSolutionsPage extends React.Component {
 			quesId: "",
 			loadingProgress: 0,
 			message: "",
+			loader: false,
 		};
 	}
 
@@ -58,27 +59,35 @@ class UploadSolutionsPage extends React.Component {
 		if (!this.state.quesId || !this.state.confirmEmail)
 			return this.setState({ message: "Please Fill All the details!" });
 
-		fetch("https://dsa-cracker-server.herokuapp.com/upload", {
-			method: "post",
-			headers: {
-				"content-type": "application/json",
-				Authorization: window.localStorage.getItem("token"),
+		this.setState(
+			{
+				loader: true,
 			},
-			body: JSON.stringify({
-				solution: this.state.url,
-				confirmEmail: this.state.confirmEmail,
-				quesId: this.state.quesId,
-			}),
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				return this.setState({
-					message: data.message,
-					url: "",
-					confirmEmail: "",
-					quesId: "",
-				});
-			});
+			() => {
+				fetch("https://dsa-cracker-server.herokuapp.com/upload", {
+					method: "post",
+					headers: {
+						"content-type": "application/json",
+						Authorization: window.localStorage.getItem("token"),
+					},
+					body: JSON.stringify({
+						solution: this.state.url,
+						confirmEmail: this.state.confirmEmail,
+						quesId: this.state.quesId,
+					}),
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						return this.setState({
+							message: data.message,
+							url: "",
+							confirmEmail: "",
+							quesId: "",
+							loader: false,
+						});
+					});
+			}
+		);
 	};
 
 	render() {
@@ -86,43 +95,53 @@ class UploadSolutionsPage extends React.Component {
 		return (
 			<div className="upload-page__main-container">
 				<div className="upload__card">
+					<label htmlFor="confirmEmail">
+						Add Email on which you want us to contact you!
+					</label>
 					<input
 						type="email"
-						placeholder="Confirm Email"
+						id="confirmEmail"
+						placeholder="Email*"
 						onChange={this.handleChange}
 						className="upload__input"
 						name="confirmEmail"
 						value={this.state.confirmEmail}
 					/>
+					<label htmlFor="quesId">
+						Enter Question Id.(You can get it by placing your pointer on the
+						question)
+					</label>
 					<input
 						type="text"
+						id="quesId"
 						className="upload__input"
-						placeholder="Ques ID"
+						placeholder="Ques ID* | Example: (ARRAY_10) "
 						onChange={this.handleChange}
 						name="quesId"
 						value={this.state.quesId}
 					/>
-					<input type="file" onChange={this.upload} />
+					<label htmlFor="videoFile">Choose your video solution</label>
+					<input type="file" id="videoFile" onChange={this.upload} />
 					{this.state.loading ? (
 						<div className="w3-light-grey w3-round-xlarge">
 							<div
 								className="w3-container w3-blue w3-round-xlarge"
 								style={{ width: this.state.loadingProgress }}
 							>
-								{this.state.loadingProgress}%
+								Upload Progress: {this.state.loadingProgress}%
 							</div>
 						</div>
 					) : null}
-					{this.state.loadingProgress === 100 ? (
+					{this.state.loadingProgress === 100 && this.state.loader === false ? (
 						<button onClick={this.handleSubmit}>Submit</button>
 					) : (
 						<button disabled={true}>Submit</button>
 					)}
 					<p>{this.state.message}</p>
+					<p>
+						Click <Link to="/profile">here</Link> to go to profile page!
+					</p>
 				</div>
-				<p>
-					Click <Link to="/profile">here</Link> to go to profile page!
-				</p>
 			</div>
 		);
 	}

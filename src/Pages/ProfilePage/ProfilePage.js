@@ -3,7 +3,6 @@ import QuesContainer from "../../Components/QuesContainer/QuesContainer";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { questions } from "../../questions";
 import "./profilepage.css";
-import { Link } from "react-router-dom";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
 class ProfilePage extends React.Component {
@@ -124,11 +123,8 @@ class ProfilePage extends React.Component {
 
 		return (
 			<div>
-				{/* <p>
-					Upload Videos for premium <Link to="/upload">here</Link>
-				</p> */}
+				<Sidebar ids={ids} headings={typeFullForms} width={this.props.width} />
 				<div className="main-container">
-					<Sidebar ids={ids} headings={typeFullForms} />
 					{quesArr.map((i, j) => {
 						return (
 							<QuesContainer

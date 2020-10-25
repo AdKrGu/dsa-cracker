@@ -1,7 +1,21 @@
-.navbar {
+@font-face {
+  font-family: Logo;
+  src: url("../../logo.otf") format("opentype");
+}
+
+.navbar-container {
   width: 100%;
   height: 100px;
   background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 199;
+}
+
+.navbar-container .navbar {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,50 +29,31 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  z-index: 199;
+  margin: auto;
 }
 
-.navbar .nav__logo {
-  width: 100px;
-  margin-left: 100px;
+.navbar-container .navbar .nav__logo {
+  line-height: 100px;
+  margin: 0;
+  font-family: Logo;
+  font-weight: 100;
+  color: #333;
 }
 
-.navbar .nav__login {
-  padding: 15px 20px;
+.navbar-container .navbar .nav__login {
+  padding: 10px 15px;
   background-color: #49a1db;
   color: white;
   border: none;
-  margin: 30px;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
 }
 
-.navbar .nav__login:active {
+.navbar-container .navbar .nav__login:active {
   background-color: #358bc4;
-}
-
-@media only screen and (max-width: 500px) {
-  .navbar {
-    position: sticky;
-    position: -webkit-sticky;
-  }
-  .navbar .nav__logo {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 47%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-  }
-  .navbar .nav__login {
-    padding: 10px 15px;
-    margin-right: 10px;
-  }
 }
 
 @media only screen and (min-width: 500px) {

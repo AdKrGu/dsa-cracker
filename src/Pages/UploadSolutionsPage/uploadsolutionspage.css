@@ -6,7 +6,7 @@
 
 .upload-page__main-container .upload__card {
   background-color: #fff;
-  width: 60%;
+  width: 50%;
   margin: 40vh auto 0 auto;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -17,5 +17,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 20px;
+}
+
+.upload-page__main-container .upload__card input {
+  padding: 10px;
+  margin: 10px;
+}
+
+.upload-page__main-container .upload__card button {
+  padding: 10px 30px;
+  width: 30%;
+  margin: 10px;
 }
 /*# sourceMappingURL=uploadsolutionspage.css.map */

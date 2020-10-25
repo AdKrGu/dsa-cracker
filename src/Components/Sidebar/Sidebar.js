@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 
 const Sidebar = (props) => {
 	const [width, setWidth] = useState(0);
+
+	useEffect(() => {
+		setWidth(250);
+	}, [props.width]);
 
 	return (
 		<div>
@@ -22,9 +26,6 @@ const Sidebar = (props) => {
 					);
 				})}
 			</div>
-			<span className="openbtn" onClick={() => setWidth(250)}>
-				&#9776;
-			</span>
 		</div>
 	);
 };
