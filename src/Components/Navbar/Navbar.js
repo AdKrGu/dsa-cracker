@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar(props) {
+	const [width, setWidth] = useState(window.innerWidth);
+
+	window.addEventListener("resize", () => {
+		setWidth(window.innerWidth);
+	});
+
 	return (
 		<div className="navbar-container">
 			<nav className="navbar">
@@ -16,7 +22,7 @@ function Navbar(props) {
 				) : null}
 
 				<Link to="/" style={{ textDecoration: "none" }}>
-					<h2 className="nav__logo">code n coffee</h2>
+					<h2 className="nav__logo">{width > 500 ? "code n coffee" : "cnc"}</h2>
 				</Link>
 				{window.location.pathname === "/" ? (
 					<a href="#form">
