@@ -95,6 +95,7 @@ class UploadSolutionsPage extends React.Component {
 		return (
 			<div className="upload-page__main-container">
 				<div className="upload__card">
+					<h3>Upload Your Solution!</h3>
 					<label htmlFor="confirmEmail">
 						Add Email on which you want us to contact you!
 					</label>

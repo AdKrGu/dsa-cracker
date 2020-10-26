@@ -30,4 +30,10 @@
   width: 30%;
   margin: 10px;
 }
+
+@media only screen and (max-width: 500px) {
+  .upload-page__main-container .upload__card {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=uploadsolutionspage.css.map */
