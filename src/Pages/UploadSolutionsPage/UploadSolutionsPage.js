@@ -1,7 +1,6 @@
 import React from "react";
 import "./uploadsolutionspage.css";
 import { storage } from "../../Firebase/config";
-import PageNotFound from "../PageNotFound/PageNotFound";
 import { Link } from "react-router-dom";
 
 class UploadSolutionsPage extends React.Component {
@@ -91,7 +90,12 @@ class UploadSolutionsPage extends React.Component {
 	};
 
 	render() {
-		if (!window.localStorage.getItem("token")) return <PageNotFound />;
+		if (!window.localStorage.getItem("token"))
+			return (
+				<h1>
+					You need to <Link to="/">Login</Link> in order to continue!
+				</h1>
+			);
 		return (
 			<div className="upload-page__main-container">
 				<div className="upload__card">

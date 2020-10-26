@@ -7,6 +7,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import UploadSolutionPage from "./Pages/UploadSolutionsPage/UploadSolutionsPage";
+import Unsubscribe from "./Pages/Unsubscribe/Unsubscribe";
 
 function App() {
 	useEffect(() => {
@@ -49,6 +50,7 @@ function App() {
 					render={(props) => <ProfilePage {...props} width={width} />}
 				/>
 				<Route component={UploadSolutionPage} path="/upload" />
+				<Route component={Unsubscribe} path="/unsubscribe/:id" />
 				<Route component={PageNotFound} path="*" />
 			</Switch>
 		</div>
