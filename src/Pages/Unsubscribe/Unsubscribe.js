@@ -12,7 +12,7 @@ class Unsubscribe extends React.Component {
 	componentDidMount() {
 		const id = window.location.pathname.split("/")[2];
 
-		fetch("http://localhost:8090/unsubscribe", {
+		fetch("https://dsa-cracker-server.herokuapp.com/unsubscribe", {
 			method: "PATCH",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ id }),
@@ -31,7 +31,7 @@ class Unsubscribe extends React.Component {
 			},
 			() => {
 				const id = window.location.pathname.split("/")[2];
-				fetch("http://localhost:8090/subscribe", {
+				fetch("https://dsa-cracker-server.herokuapp.com/subscribe", {
 					method: "PATCH",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({ id }),
